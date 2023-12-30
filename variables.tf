@@ -72,3 +72,7 @@ variable "environment" {
   description = "The environment variables of the lambda function"
   default     = {}
 }
+
+output "gateway_target_domain_name" {
+  value = aws_apigatewayv2_domain_name.domain.domain_name_configuration[0].target_domain_name
+}
