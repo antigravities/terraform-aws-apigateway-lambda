@@ -97,3 +97,7 @@ resource "aws_api_gateway_account" "account" {
 
   cloudwatch_role_arn = var.adjust_cloudwatch_settings ? aws_iam_role.gw_role[0].arn : null
 }
+
+resource "aws_cloudwatch_log_group" "logs" {
+  name = "${local.safe_name}-logs"
+}

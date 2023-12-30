@@ -1,5 +1,5 @@
 locals {
-  safe_name = replace(var.name, "[^a-zA-Z0-9-_]", "_")
+  safe_name = replace(var.name, "/[^a-zA-Z0-9-_]/", "_")
 }
 
 variable "name" {
