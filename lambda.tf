@@ -34,6 +34,7 @@ resource "aws_lambda_function" "lambda" {
   filename         = var.source_code
   timeout          = var.timeout
   architectures    = var.architectures
+  memory_size      = var.memory_size
 
   environment {
     variables = var.environment

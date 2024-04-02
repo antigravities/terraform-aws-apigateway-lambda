@@ -73,6 +73,12 @@ variable "environment" {
   default     = {}
 }
 
+variable "memory_size" {
+  type        = number
+  description = "Max memory to give to function"
+  default     = 128
+}
+
 output "gateway_target_domain_name" {
   value = aws_apigatewayv2_domain_name.domain.domain_name_configuration[0].target_domain_name
 }
