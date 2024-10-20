@@ -82,3 +82,10 @@ variable "memory_size" {
 output "gateway_target_domain_name" {
   value = aws_apigatewayv2_domain_name.domain.domain_name_configuration[0].target_domain_name
 }
+
+output "gateway_ids" {
+  value = {
+    api_id = aws_apigatewayv2_api.gateway.id
+    stage_id = aws_apigatewayv2_stage.stage.id
+  }
+}
