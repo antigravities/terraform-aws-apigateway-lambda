@@ -35,7 +35,7 @@ resource "aws_lambda_function" "lambda" {
   timeout          = var.timeout
   architectures    = var.architectures
   memory_size      = var.memory_size
-  layers           = var.layer ? [var.layer] : []
+  layers           = var.layer != null ? [var.layer] : []
 
   environment {
     variables = var.environment
