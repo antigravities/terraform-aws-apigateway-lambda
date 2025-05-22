@@ -40,7 +40,7 @@ variable "role_arn" {
 variable "runtime" {
   type        = string
   description = "The runtime of the lambda function"
-  default     = "nodejs18.x"
+  default     = "nodejs22.x"
 }
 
 variable "handler" {
